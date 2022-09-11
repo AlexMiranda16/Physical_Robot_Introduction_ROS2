@@ -44,7 +44,7 @@ To stop the motors, any other key can be pressed.
   
 If not done yet, use the Arduino IDE to upload the code to the Arduino board you are using (must be an ATMega328 microcontroller board).
 
-Assuming the projects are already compiled (if not, use the colcon build command previously mentioned in your workspace directory), open two terminal windows and go to your workspace diretory and source the sript file in both of them.
+Assuming the projects are already compiled (if not, use the colcon build command previously mentioned in your workspace directory), open two terminal windows and go to your workspace diretory and source the script file in both of them.
 
 ```
 cd ~/dev_ws/
@@ -79,7 +79,37 @@ All messages have a letter that works as an identification and a number that cor
 
 
 
-# 3. Demo 2 - Virtual lidar test
+# 3. Demo 2 - Virtual LiDAR test
+
+The second demo has the objective to test the camera and the applied image processing.
+
+This demo prints on the terminal the distance of the nearest object both at the front and at the rear of the robot.
+
+Assuming the projects are already compiled (if not, use the colcon build command previously mentioned in your workspace directory), open two terminal windows and go to your workspace diretory and source the script file in both of them.
+
+```
+cd ~/dev_ws/
+source install/setup.bash
+```
+
+Now, in one terminal start the camera range test program with following command. This terminal will display the frontal and rear measurements.
+
+```
+ros2 run motor_test_control demo
+```
+
+On the other terminal, run the camera simulated LiDAR. This node is the one responsible for gathering the camera image, do some processing on it and with that it simulates a LiDAR sensor, and publish the distances calculated around the robot.
+
+```
+ros2 run fisheye_camera_simulated_sensors_ros2 simulated_lidar
+```
+
+Instead of running both ``ros2 run`` to execute this application, it can be used the launch file created. Stop both nodes if they are still running and in one terminal run the next ``ros2 launch`` command:
+
+```
+ros2 launch camera_lidar_range_test range_demo.launch.xml
+```
+
 
 
 

@@ -1,0 +1,9 @@
+<launch>
+
+<node name="demo" pkg="reactive_robot_demo" exec="demo"> </node>
+
+<node name="serial_com" pkg="rpi_uno" exec="serial_com"> </node>
+
+<node name="simulated_lidar" pkg="fisheye_camera_simulated_sensors_ros2" exec="simulated_lidar"> </node>
+
+</launch>

@@ -1,0 +1,20 @@
+<!--
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="debug" default="false"/>
+
+    <node name="simulated_lidar" type="simulated_lidar" pkg="fisheye_camera_simulated_sensors_ros1" output="screen">
+        <param name="debug" value="$(arg debug)"/>
+    </node>
+
+</launch>
+-->
+
+<launch>
+
+    <node name="simulated_lidar" exec="simulated_lidar" pkg="fisheye_camera_simulated_sensors_ros2" output="screen">
+        <param name="debug" value="false"/>
+    </node>
+
+</launch>

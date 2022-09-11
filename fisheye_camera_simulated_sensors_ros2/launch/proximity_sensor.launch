@@ -1,0 +1,22 @@
+<!--
+
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="debug" default="false"/>
+
+    <node name="proximity_sensor" type="proximity_sensor" pkg="fisheye_camera_simulated_sensors_ros1" output="screen">
+        <param name="debug" value="$(arg debug)"/>
+    </node>
+
+</launch>
+
+-->
+
+<launch>
+
+    <node name="proximity_sensor" exec="proximity_sensor" pkg="fisheye_camera_simulated_sensors_ros2" output="screen">
+        <param name="debug" value="false"/>
+    </node>
+
+</launch>

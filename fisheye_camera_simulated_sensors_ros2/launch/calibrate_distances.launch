@@ -1,0 +1,25 @@
+<!--
+
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="debug" default="false"/>
+    <arg name="image_name" default="6_by_4.jpg"/>
+
+    <node name="camera_calibration" type="camera_calibration" pkg="fisheye_camera_simulated_sensors_ros1" output="screen">
+        <param name="debug" value="$(arg debug)"/>
+        <param name="image_path" value="$(find fisheye_camera_simulated_sensors_ros1)/include/calib_imgs/$(arg image_name)"/>
+    </node>
+
+</launch>
+
+-->
+
+<launch>
+
+    <node name="camera_calibration" exec="camera_calibration" pkg="fisheye_camera_simulated_sensors_ros2" output="screen">
+        <param name="debug" value="false"/>
+        <param name="image_path" value="fisheye_camera_simulated_sensors_ros2/include/calib_imgs/6_by_4.jpg"/>
+    </node>
+
+</launch>

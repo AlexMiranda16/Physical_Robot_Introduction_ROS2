@@ -1,0 +1,29 @@
+<!--
+
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="debug" default="false"/>
+    <arg name="record" default="false"/>
+
+    <node name="object_detection" type="object_detection" pkg="fisheye_camera_simulated_sensors_ros1" output="screen">
+        <param name="debug" value="$(arg debug)"/>
+        <param name="record" value="$(arg record)"/>
+        <param name="sensor_img_path" value="$(find fisheye_camera_simulated_sensors_ros1)/include/images/"/>
+        <param name="recording_path" value="$(find fisheye_camera_simulated_sensors_ros1)/output/recorded.avi"/>
+    </node>
+
+</launch>
+
+-->
+
+<launch>
+
+    <node name="object_detection" exec="object_detection" pkg="fisheye_camera_simulated_sensors_ros2" output="screen">
+        <param name="debug" value="false"/>
+        <param name="record" value="false"/>
+        <param name="sensor_img_path" value="fisheye_camera_simulated_sensors_ros2/include/images/"/>
+        <param name="recording_path" value="fisheye_camera_simulated_sensors_ros2/output/recorded.avi"/>
+    </node>
+
+</launch>

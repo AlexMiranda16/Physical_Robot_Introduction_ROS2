@@ -1,0 +1,7 @@
+<launch>
+
+<node name="demo" pkg="camera_lidar_range_test" exec="demo"> </node>
+
+<node name="simulated_lidar" pkg="fisheye_camera_simulated_sensors_ros2" exec="simulated_lidar"> </node>
+
+</launch>

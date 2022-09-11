@@ -3,6 +3,8 @@
 
 Repository for the demo files and guide to setup and run them.
 
+
+
 # 1. Prerequisites
 
 Besides the software, you need to create a new ROS2 workspace to place all the robot packages. In this example, the ROS2 workspace was named "dev_ws" but you can give it another name.
@@ -29,7 +31,7 @@ For more information about the ROS2 workspace creation visit "[Creating a worksp
 
 
 
-# 3. Demo 1 - Keyboard robot motors control
+# 2. Demo 1 - Keyboard robot motor control
 
 This first demo has the purpose to test the motors operation.
 
@@ -74,6 +76,10 @@ ros2 topic echo /motor_odometry
 
 **Note:**
 All messages have a letter that works as an identification and a number that corresponds to the value we want to send or read. In this case, each letter represents a motor and the type of data we are sending/receiving, and the number translates its value. All messages have the same order: ``left_motor_value right_motor_value`` (first is the letter and value of the left motor, followed by a space and then the letter and value of the right motor).
+
+
+
+# 3. Demo 2 - Virtual lidar test
 
 
 

@@ -79,7 +79,7 @@ All messages have a letter that works as an identification and a number that cor
 
 
 
-# 3. Demo 2 - Virtual LiDAR test
+# 3. Demo 2 - Camera based virtual LiDAR test
 
 The second demo has the objective to test the camera and the applied image processing.
 
@@ -110,6 +110,26 @@ Instead of running both ``ros2 run`` to execute this application, it can be used
 ros2 launch camera_lidar_range_test range_demo.launch.xml
 ```
 
+# 4. Demo 3 - Reactive robot demo
+
+This last program will run a simple reactive robot that will avoid colision with objects. The robot moves forward until a nearby object is identified in front of him. The robot then rotates to the left until the object is no longer in his front and proceeds to move forward in the new direction.
+
+Assuming the projects are already compiled (if not, use the colcon build command previously mentioned in your workspace directory), open one terminal window and go to your workspace diretory and source the script file.
+
+```
+cd ~/dev_ws/
+source install/setup.bash
+```
+
+Now, start the reactive robot program with the following ``ros2 launch`` command. This launch file will start three nodes:
+
+- The reactive robot demo node. Evaluates the camera information and commands the movement for the robot to make.
+- The simulated LiDAR node. As previsouly explained on the demo2 program, is responsible for the camera image processing, simulating a virtual LiDAR by calculating the distance of objects aroud the robot.
+- The Raspberry Pi - Arduino communication node. Also explained previouly. Ensures the communication between the Rasperry and the Arduino, by sending movement commands for each motor, and receiving the current and odometry of each one.
+
+```
+ros2 launch reactive_robot_demo reactive.launch.xml
+```
 
 
 

@@ -1,0 +1,7 @@
+<launch>
+
+<node name="demo" pkg="motor_test_control" exec="demo"> </node>
+
+<node name="serial_com" pkg="rpi_uno" exec="serial_com"> </node>
+
+</launch>

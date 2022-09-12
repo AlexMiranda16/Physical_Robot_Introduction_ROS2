@@ -105,7 +105,7 @@ source install/setup.bash
 Now, in one terminal start the camera range test program with following command. This terminal will display the frontal and rear measurements.
 
 ```
-ros2 run motor_test_control demo
+ros2 run camera_lidar_range_test demo
 ```
 
 On the other terminal, run the camera simulated LiDAR. This node is the one responsible for gathering the camera image, do some processing on it and with that it simulates a LiDAR sensor, and publish the distances calculated around the robot.

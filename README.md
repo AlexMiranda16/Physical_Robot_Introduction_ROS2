@@ -1,11 +1,21 @@
 # Physical_Robot_Introduction_ROS2
 
+This repository contains three ROS2 demos with different functionalities for the robot developed during the dissertation. Here will be explained how to setup and run each one of them. This programs were specifically made for this robot so, it is assumed that you are using one equal to the one presented.
 
-Repository for the demo files and guide to setup and run them.
+## (METER FOTO DO ROBO)
 
+The first demo tests the motors, controlling the robot using a keyboard, and checking if the motor current and encoders are published.
+The second demo tests if the camera and the image processing is properly working, by reading the distances measured at the front and back of the robot.
+The third and last demo is a simple reactive robot demo, where the robot uses the camera to check for object at his front and avoids them.
+
+These demos are independent from each other, and if you want to run one demo when another is running, you should stop the running one first before starting the demo wanted.
 
 
 # 1. Prerequisites
+
+One obvious prerequisite is to at least have one robot equal to the one used to develop these demos.
+
+
 
 Besides the software, you need to create a new ROS2 workspace to place all the robot packages. In this example, the ROS2 workspace was named "dev_ws" but you can give it another name.
 

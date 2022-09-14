@@ -15,7 +15,16 @@ These demos are independent from each other, and if you want to run one demo whe
 
 One obvious prerequisite is to at least have one robot equal to the one used to develop these demos.
 
+Regarding software, you need to install some tools, mainly:
+  - Raspbian OS (Debian Buster version)
+  - ROS2 Foxy Fitzroy (and add some required packages)
+  - Arduino IDE
+  - Visual Studio Code (optional)
+  - VNC Server (optional but recomended for remote access to the robot Operating System, both for devloping, running and debbuging programs)
+ 
+You will also need to configure device identification ports attributed by the OS.
 
+(DIZER AQUI QUE PARA SABER COMO DAR LOCK AS PORTAS E COMO INSTALAR TODOS OS OUTROS SOFTWARES REFERIDOS ACIMA PODE-SE CONSULTAR O GUIA ANEXADO QUE EXPLICA O PROCEDIMENTO E SOLUÇÕES PARA EVENTUAIS PROBLEMAS DE INSTALAÇÃO E CONFIGURAÇÃO)
 
 Besides the software, you need to create a new ROS2 workspace to place all the robot packages. In this example, the ROS2 workspace was named "dev_ws" but you can give it another name.
 
@@ -29,6 +38,9 @@ cd ..
 rosdep install -i --from-path src --rosdistro foxy -y
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
+
+As the instalation and configuration guide (REFERIR AQUI O GUIA NOVAMENTE) refers, you need to add additional packages to your workspace.
+
 
 Don't forget that in every new terminal opened, you need to source the setup script of this workspace. Alternatively, you can add the source command to the .bashrc file in a similar way to that shown in the intallation guide.
 
@@ -45,12 +57,12 @@ For more information about the ROS2 workspace creation visit "[Creating a worksp
 
 This first demo has the purpose to test the motors operation.
 
-The program controls the robot movement using the "wasd" keyboard keys
-  (w - foward;
-  a - left rotation;
-  s - backward;
-  d - right rotation;).
-To stop the motors, any other key can be pressed.
+The program controls the robot movement using the "wasd" keyboard keys:
+  - w - foward;
+  - a - left rotation;
+  - s - backward;
+  - d - right rotation;).
+  - To stop the motors, any other key can be pressed.
   
 If not done yet, use the Arduino IDE to upload the code to the Arduino board you are using (must be an ATMega328 microcontroller board).
 

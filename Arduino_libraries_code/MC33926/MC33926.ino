@@ -105,8 +105,8 @@ void sendOdometry(void)
   o2_a = o2;
 
   // Send it
-  sendChannel('l', vel_odo1); 
-  sendChannel('r', vel_odo2); 
+  sendChannel('l', o1); 
+  sendChannel('r', o2); 
 }
 
 
@@ -262,7 +262,7 @@ void loop()
     
     sendOdometry();
     sendCurrent();
-    Serial.println();
+    //Serial.println();
 
     Erro1 = RefVel1-vel_odo1;
     Ierro1 = Ierro1 + Erro1;

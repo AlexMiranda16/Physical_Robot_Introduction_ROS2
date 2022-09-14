@@ -18,10 +18,12 @@ void camera_sub(sensor_msgs::msg::LaserScan::SharedPtr camera_msg){
 
   float avoid_distance = 200.00; //Distance to where the robot should rotate to avoid colision with an object
   float front_laser = camera_msg->ranges[n_lasers/2]; //Distance measured from the frontal laser
+  float front_left_laser = camera_msg->ranges[n_lasers/2 - round( 20/(360/n_lasers) ) ]; //Distance measured from the frontal laser angled to the left
+  float front_right_laser = camera_msg->ranges[n_lasers/2 + round( 20/(360/n_lasers) ) ]; //Distance measured from the frontal laser angled to the right
 
   //Decide the movement to make
   //Rotate
-  if ( (std::isnan(front_laser)) || (front_laser < avoid_distance)){
+  if ( (std::isnan(front_laser)) || (front_laser < avoid_distance) || (front_left_laser < avoid_distance) || (front_right_laser < avoid_distance)){
 
     //Rotate left command
     command_msg.data = "L0050 R0050";

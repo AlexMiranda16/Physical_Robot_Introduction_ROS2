@@ -1,7 +1,6 @@
 # Physical_Robot_Introduction_ROS2
 
-This repository contains three ROS2 demos to teach the user how to work with ROS2 to develop programs for physical robots. This tutorial will explain how to setup and run each demo. The objective of this guide is to give a first contact to the robot by running and testing these demos, while at the same time get more used to ROS2 environment.
-This programs were specifically made for this robot so, it is assumed that you are using one equal to the one shown on the next image.
+This repository contains three ROS2 demos to teach the user how to work with ROS2 to develop programs for physical robots. This tutorial will explain how to setup and run each demo for the robot depicted below. The objective of this guide is to give a first contact to the robot by running and testing these demos, while at the same time get more used to ROS2 environment. This programs were specifically made for this robot so, it is assumed that you are using one equal to the one shown on the image below.
 
 <img src="https://user-images.githubusercontent.com/60965257/190620499-43fed76a-25cf-47f2-94da-b5b48753c434.jpg" width=50% height=50%>
 

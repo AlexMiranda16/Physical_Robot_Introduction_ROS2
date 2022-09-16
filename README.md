@@ -19,14 +19,14 @@ One obvious prerequisite is to have at least one robot equal to the one used to 
 
 Regarding software, you need to install some tools, mainly:
   - Raspbian OS (Debian Buster version)
-  - ROS2 Foxy Fitzroy (and add some required packages)
+  - ROS2 Foxy Fitzroy (and some packages described below)
   - Arduino IDE
   - Visual Studio Code (optional)
   - VNC Server (optional but recomended for remote access to the robot's Operating System, both for developing, running and debbuging programs)
  
 You will also need to configure device identification ports attributed by the OS.
 
-For you to know to install all software and how to create fixed tty device ports, you can download this PDF file. This guide provides additional information to possible installtion and configuration problems.
+For you to know to how to install all the software and how to create fixed tty device ports, you can download this PDF file. This guide provides additional information to possible installtion and configuration problems.
 
 [Software_Installation_Env_Config.pdf](https://github.com/AlexMiranda16/Physical_Robot_Introduction_ROS2/files/9583154/Software_Installation_Env_Config.pdf)
 
@@ -55,28 +55,26 @@ cd ..
 rosdep install --from-paths src -r -y
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
-The next step is to install the RaspiCam, a API for using the Raspberry Pi camera with OpenCV. The compilation process guide is explained on the ReadMe file on the RaspiCam repository. You can find it here: <https://github.com/cedricve/raspicam>.
+The next step is to install the RaspiCam, an API for using the Raspberry Pi camera with OpenCV. The compilation process guide is explained on the ReadMe file on the RaspiCam repository, located here: <https://github.com/cedricve/raspicam>.
 
-
-Don't forget that in every new terminal opened, you need to source the setup script of this workspace. Alternatively, you can add the source command to the .bashrc file in a similar way to that shown in the intallation guide.
+Do not forget that in every new terminal opened, you need to source the setup script of this workspace. Alternatively, you can add the source command to the .bashrc file in a similar way to that shown in section A.3 of the intallation guide.
 
 ```
 source install/setup.bash
 ```
 
-For more information about the ROS2 workspace creation visit "[Creating a workspace](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html)".
-
+For more information about the ROS2 workspace creation, please visit "[Creating a workspace](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html)".
 
 
 # 2. Demo 1 - Keyboard robot motor control
 
-This first demo has the purpose to test the motors operation.
+This first demo has the purpose to test the motors' operation.
 
 The program controls the robot movement using the "wasd" keyboard keys:
   - w - foward;
   - a - left rotation;
   - s - backward;
-  - d - right rotation;).
+  - d - right rotation;
   - To stop the motors, any other key can be pressed.
   
 If not done yet, use the Arduino IDE to upload the code to the Arduino board you are using (must be an ATMega328 microcontroller board).

@@ -68,7 +68,7 @@ For more information about the ROS2 workspace creation, please visit "[Creating 
 
 # 2. Demo 1 - Keyboard robot motor control
 
-This first demo has the purpose to test the motors' operation.
+**Objective**: Test the motors' operation.
 
 The program controls the robot movement using the "wasd" keyboard keys:
   - w - foward;
@@ -135,7 +135,7 @@ This next table clarifies the different letters meaning.
 
 # 3. Demo 2 - Camera based virtual LiDAR test
 
-The second demo has the objective to test the camera and the applied image processing.
+**Objective**: test the camera and the applied image processing algorithm.
 
 This demo prints on the terminal the distance of the nearest object both at the front and at the rear of the robot.
 
@@ -182,7 +182,9 @@ Tall objects might give wrong measures. In the video you can see that the hand d
 
 # 4. Demo 3 - Reactive robot demo
 
-This last program will run a simple reactive robot that will avoid colision with objects. The robot moves forward until a nearby object is identified in front of him. The robot then rotates to the left until the object is no longer in his front and proceeds to move forward in the new direction.
+**Objective**: Run a simple reactive robot that avoids colision with objects.
+
+The robot moves forward until a nearby object is identified in front of him. The robot then rotates to the left until the object is no longer in his front and proceeds to move forward in the new direction.
 
 If not done yet, use the Arduino IDE to upload the code to the Arduino board you are using (must be an ATMega328 microcontroller board).
 

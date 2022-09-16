@@ -22,7 +22,7 @@ Regarding software, you need to install some tools, mainly:
   - ROS2 Foxy Fitzroy (and add some required packages)
   - Arduino IDE
   - Visual Studio Code (optional)
-  - VNC Server (optional but recomended for remote access to the robot Operating System, both for developing, running and debbuging programs)
+  - VNC Server (optional but recomended for remote access to the robot's Operating System, both for developing, running and debbuging programs)
  
 You will also need to configure device identification ports attributed by the OS.
 

@@ -184,7 +184,7 @@ Tall objects might give wrong measures. In the video you can see that the hand d
 
 **Objective**: Run a simple reactive robot that avoids colision with objects.
 
-The robot moves forward until a nearby object is identified in front of him. The robot then rotates to the left until the object is no longer in his front and proceeds to move forward in the new direction.
+The robot moves forward until a nearby object is identified in front of it. The robot then rotates to the left until the object is no longer in its front and proceeds to move forward in the new direction.
 
 If not done yet, use the Arduino IDE to upload the code to the Arduino board you are using (must be an ATMega328 microcontroller board).
 

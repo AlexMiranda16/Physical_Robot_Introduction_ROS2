@@ -1,8 +1,10 @@
 # Physical_Robot_Introduction_ROS2
 
-This repository contains three ROS2 demos with different functionalities for the robot developed during the dissertation. Here will be explained how to setup and run each one of them. This programs were specifically made for this robot so, it is assumed that you are using one equal to the one presented.
+This repository contains three ROS2 demos with different functionalities for the robot developed during the dissertation. Here will be explained how to setup and run each one of them. The objective of this guide is to give a first contact to the robot by running and testing these demos, while at the same time get more used to ROS2 environment.
+This programs were specifically made for this robot so, it is assumed that you are using one equal to the one shown on the next image.
 
-## (METER FOTO DO ROBO)
+<img src="https://user-images.githubusercontent.com/60965257/190620499-43fed76a-25cf-47f2-94da-b5b48753c434.jpg" width=50% height=50%>
+
 
 The first demo tests the motors, controlling the robot using a keyboard, and checking if the motor current and encoders are published.
 The second demo tests if the camera and the image processing is properly working, by reading the distances measured at the front and back of the robot.
@@ -24,9 +26,9 @@ Regarding software, you need to install some tools, mainly:
  
 You will also need to configure device identification ports attributed by the OS.
 
-For you to know to install and how to create fixed tty device ports, you can access this attached file on the repository. This guide provides additional information to possible installtion and configuration problems.
+For you to know to install all software and how to create fixed tty device ports, you can download this PDF file. This guide provides additional information to possible installtion and configuration problems.
 
-(DIZER AQUI QUE PARA SABER COMO DAR LOCK AS PORTAS E COMO INSTALAR TODOS OS OUTROS SOFTWARES REFERIDOS ACIMA PODE-SE CONSULTAR O GUIA ANEXADO QUE EXPLICA O PROCEDIMENTO E SOLUÇÕES PARA EVENTUAIS PROBLEMAS DE INSTALAÇÃO E CONFIGURAÇÃO)
+[Software_Installation_Env_Config.pdf](https://github.com/AlexMiranda16/Physical_Robot_Introduction_ROS2/files/9583154/Software_Installation_Env_Config.pdf)
 
 Besides the software, you need to create a new ROS2 workspace to place all the robot packages. In this example, the ROS2 workspace was named "dev_ws" but you can give it another name.
 
@@ -41,7 +43,7 @@ rosdep install -i --from-path src --rosdistro foxy -y
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-As the instalation and configuration guide (REFERIR AQUI O GUIA NOVAMENTE) refers, you need to add additional packages to your workspace.
+As the instalation and configuration guide refers, you need to add additional packages to your workspace.
 
 Download the following packages to the src folder of your workspace directory. When downloaded, compile the workspace again.
 ```

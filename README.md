@@ -26,7 +26,7 @@ Regarding software, you need to install some tools, mainly:
  
 You will also need to configure device identification ports attributed by the OS.
 
-For you to know to how to install all the software and how to create fixed tty device ports, you can download this PDF file. This guide provides additional information to possible installtion and configuration problems.
+For you to know how to install all the software and how to create fixed tty device ports, you can download the following PDF file. This guide provides additional information to possible installation and configuration problems.
 
 [Software_Installation_Env_Config.pdf](https://github.com/AlexMiranda16/Physical_Robot_Introduction_ROS2/files/9583154/Software_Installation_Env_Config.pdf)
 

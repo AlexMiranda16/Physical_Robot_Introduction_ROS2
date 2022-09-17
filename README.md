@@ -211,7 +211,7 @@ Again, to check if everything is running properly, with both nodes running, run 
 
 ![Demo3_node_topics](https://user-images.githubusercontent.com/60965257/190604640-a879503b-804c-40cf-a9ca-e0a9be6e9811.JPG)
 
-If the robot is doing what it is supposed to do in this demo, you should see him behave similarly to this video. He will turn left to avoid obstacles when he is near them.
+If the robot is doing what it is supposed to do in this demo, you should see it behave similarly to this video. It will turn left to avoid obstacles when it is near them.
 
 https://user-images.githubusercontent.com/60965257/190605027-d67acebc-124f-40ca-b0a2-27d1a983f239.mp4
 

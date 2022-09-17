@@ -30,7 +30,7 @@ For you to know how to install all the software and how to create fixed tty devi
 
 [Software_Installation_Env_Config.pdf](https://github.com/AlexMiranda16/Physical_Robot_Introduction_ROS2/files/9583154/Software_Installation_Env_Config.pdf)
 
-Besides the software, you need to create a new ROS2 workspace to place all the robot packages. In this example, the ROS2 workspace was named "dev_ws" but you can give it another name.
+Besides the software, you need to create a new ROS2 workspace to place all the robot packages. In this example, the ROS2 workspace is "dev_ws" but you can give it another name.
 
 Open a terminal and create a new directory. Then, go to the "src" directory and clone the repository. Check the dependencies of the workspace and then build it using the colcon command.
 

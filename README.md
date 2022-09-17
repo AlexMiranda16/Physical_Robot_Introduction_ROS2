@@ -55,7 +55,7 @@ cd ..
 rosdep install --from-paths src -r -y
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
-The next step is to install the RaspiCam, an API for using the Raspberry Pi camera with OpenCV. The compilation process guide is explained on the ReadMe file on the RaspiCam repository, located here: <https://github.com/cedricve/raspicam>.
+The next step is to install the RaspiCam, an API for using the Raspberry Pi camera with OpenCV. The compilation process guide is explained on the ReadMe file of the RaspiCam repository, located here: <https://github.com/cedricve/raspicam>.
 
 Do not forget that in every new terminal opened, you need to source the setup script of this workspace. Alternatively, you can add the source command to the .bashrc file in a similar way to that shown in section A.3 of the intallation guide.
 

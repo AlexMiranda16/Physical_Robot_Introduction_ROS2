@@ -92,7 +92,7 @@ Now, in one terminal start the motor control program with the following command.
 ros2 run motor_test_control demo
 ```
 
-On the other terminal, start the "serial_com" node from the "rpi_uno" package. This package is responsable for the communication between the Raspberry Pi and the Arduino. This program subscribes to the topic that sends the movement command for each motor, and send it to the Arduino.
+On the other terminal, start the "serial_com" node from the "rpi_uno" package. This package is responsible for the communication between the Raspberry Pi and the Arduino. This program subscribes to the topic that sends the movement command for each motor, and send it to the Arduino.
 This node also receives information from the Arduino, namely the motor current and the odometry, and publish it.
 
 ```

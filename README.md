@@ -11,7 +11,7 @@ The third and last demo is a simple reactive robot demo, where the robot uses th
 
 These demos are independent from each other, and if you want to run one demo when another is running, you should stop the running one first before starting the demo wanted.
 
-This repository was developed developed during Alexandre Miranda's master dissertation, at the Faculty of Engineering of the University of Porto (FEUP).
+This repository was developed during Alexandre Miranda's master dissertation, at the Faculty of Engineering of the University of Porto (FEUP).
 
 # 1. Prerequisites
 

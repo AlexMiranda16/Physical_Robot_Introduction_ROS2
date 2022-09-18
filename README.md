@@ -1,15 +1,15 @@
 # Physical_Robot_Introduction_ROS2
 
-This repository contains three ROS2 demos to teach the user how to work with ROS2 to develop programs for physical robots. This tutorial will explain how to setup and run each demo for the robot depicted below. The objective of this guide is to give a first contact to the robot by running and testing these demos, while at the same time get more used to ROS2 environment. This programs were specifically made for this robot so, it is assumed that you are using one equal to the one shown on the image below.
+This repository contains three ROS2 demos to teach the user how to work with ROS2 to develop programs for physical robots. This tutorial will explain how to setup and run each demo for the robot depicted below. The objective of this guide is to give a first contact to the robot by running and testing these demos, while at the same time get more used to ROS2 environment. This programs were specifically made using this robot so, it is assumed that you are using one equal to the one shown on the image below. It is not guaranteed that these demos will work on a different robot.
 
 <img src="https://user-images.githubusercontent.com/60965257/190620499-43fed76a-25cf-47f2-94da-b5b48753c434.jpg" width=50% height=50%>
 
 
 The first demo tests the motors, controlling the robot using a keyboard, and checking if the motor current and encoders are published.
-The second demo tests if the camera and the image processing is properly working, by reading the distances measured at the front and back of the robot.
-The third and last demo is a simple reactive robot demo, where the robot uses the camera to check for object at his front and avoids them.
+The second demo tests if the camera and the image processing algorithm is properly working, by reading the distances measured at the front and back of the robot.
+The third and last demo is a simple reactive robot demo, where the robot uses the camera to check for objects at his front and avoids them.
 
-These demos are independent from each other, and if you want to run one demo when another is running, you should stop the running one first before starting the demo wanted.
+These demos are independent from each other and, if you want to run one demo when another is running, you should stop the running one first before starting the demo wanted.
 
 This repository was developed during Alexandre Miranda's master dissertation, at the Faculty of Engineering of the University of Porto (FEUP).
 
@@ -112,7 +112,7 @@ ros2 topic echo /motor_current
 ros2 topic echo /motor_odometry
 ```
 
-The following video shows an example on how the application should work. You can see on the top left the two terminals. The left one prints the encoder values received by the arduino, and the right one prints the current. You can also see how the robot should behave by pressing different letters. If you haven't done yet, give it a try!
+The following video shows an example on how the application should work. You can see on the top left the two terminals. The left one prints the odometry values received by the arduino, and the right one prints the current. You can also see how the robot should behave by pressing different letters. If you haven't done yet, give it a try!
 
 
 https://user-images.githubusercontent.com/60965257/190596889-5334ae5b-3bf6-450e-a1cf-424cafd11dd7.mp4
@@ -132,6 +132,9 @@ This next table clarifies the different letters meaning.
 | l  | Encoder value of the left motor  |
 | r  | Encoder value of the right motor  |
 
+The odometry value received is actually the number of encoder triggers in a certain direction, giving the position of the motor. A full 360º rotation corresponds to 2797 counts. Also, the value increases or decreases according to the motor rotation direction.
+
+For more information about the motor, you can visit its wiki page: https://wiki.dfrobot.com/12V_DC_Motor_251rpm_w_Encoder__SKU__FIT0186_
 
 # 3. Demo 2 - Camera based virtual LiDAR test
 

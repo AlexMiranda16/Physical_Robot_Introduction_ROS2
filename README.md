@@ -112,7 +112,12 @@ ros2 topic echo /motor_current
 ros2 topic echo /motor_odometry
 ```
 
-The following video shows an example on how the application should work. You can see on the top left the two terminals. The left one prints the odometry values received by the arduino, and the right one prints the current. You can also see how the robot should behave by pressing different letters. If you haven't done yet, give it a try!
+You can also check the speed commands sent to the Arduino by the Raspberry using the same terminal command but for the /motor_speed topic. These commands are published by the demo main program, received by the rpi_uno node, and sent to the Arduino.
+```
+ros2 topic echo /motor_speed
+```
+
+The following video shows an example on how the application should work. You can see on the top left the three terminals. The left one prints the odometry values received by the arduino, the middle one prints the current, and the right one prints the speed commands published to control the motors. You can also see how the robot should behave by pressing different keyboard letters. If you have not done yet, give it a try!
 
 
 https://user-images.githubusercontent.com/60965257/190596889-5334ae5b-3bf6-450e-a1cf-424cafd11dd7.mp4
@@ -120,7 +125,7 @@ https://user-images.githubusercontent.com/60965257/190596889-5334ae5b-3bf6-450e-
 
 **Additional Notes:**
 
-All messages have a letter that works as an identification and a number that corresponds to the value we want to send or read. In this case, each letter represents a motor and the type of data we are sending/receiving, and the number translates its value. All messages have the same order: ``left_motor&value right_motor&value`` (first is the letter and value of the left motor, followed by a space and then the letter and value of the right motor).
+All messages have a letter that works as an identification and a number that corresponds to the value we want to send or read. In this case, each letter represents a motor and the type of data we are sending/receiving, and the number translates its value. All messages have the same order: ``left_motor&value right_motor&value`` (first is the letter(channel) and then the value of the left motor, followed by a space and then the letter (channel) and value of the right motor).
 This next table clarifies the different letters meaning.
 
 | Channel  | Meaning |
@@ -131,6 +136,10 @@ This next table clarifies the different letters meaning.
 | j  | Current of the right motor  |
 | l  | Encoder value of the left motor  |
 | r  | Encoder value of the right motor  |
+
+The values following the channel are in hexadecimal (from 0 to F). The Arduino converts these values to int after receiving them. The Raspberry also receives in hexadecimal from the Arduino and also does the conversion.
+
+Regarding the values for the motors, the first hexadecimal value corresponds to the direction of rotation (note that the orientation of the motor itself also matters. That is why to move forward the left motor has a "1" and the right has a "0"). The last three digits corresponds to the rotation speed (the bigger the number, the faster it rotates).
 
 The odometry value received is actually the number of encoder triggers in a certain direction, giving the position of the motor. A full 360º rotation corresponds to 2797 counts. Also, the value increases or decreases according to the motor rotation direction.
 

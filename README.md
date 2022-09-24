@@ -117,10 +117,10 @@ You can also check the speed commands sent to the Arduino by the Raspberry using
 ros2 topic echo /motor_speed
 ```
 
-The following video shows an example on how the application should work. You can see on the top left the three terminals. The left one prints the odometry values received by the arduino, the middle one prints the current, and the right one prints the speed commands published to control the motors. You can also see how the robot should behave by pressing different keyboard letters. If you have not done yet, give it a try!
+The following video shows an example on how the application should work. You can see on the left the three terminals. The left one prints the current values, the middle one prints the odometry values received by the arduino, and the right one (the big one) prints the speed commands published to control the motors. You can also see how the robot should behave by pressing different keyboard letters. If you have not done yet, give it a try!
 
 
-https://user-images.githubusercontent.com/60965257/190596889-5334ae5b-3bf6-450e-a1cf-424cafd11dd7.mp4
+https://user-images.githubusercontent.com/60965257/192106186-dbb5066d-8821-4550-a0a1-d8a35e034697.mp4
 
 
 **Additional Notes:**
@@ -149,7 +149,7 @@ For more information about the motor, you can visit its wiki page: https://wiki.
 
 **Objective**: test the camera and the applied image processing algorithm.
 
-This demo prints on the terminal the distance of the nearest object both at the front and at the rear of the robot.
+This demo publishes the distance of the nearest object both at the front and at the rear of the robot.
 
 If not done yet, use the Arduino IDE to upload the code to the Arduino board you are using (must be an ATMega328 microcontroller board).
 
@@ -160,13 +160,13 @@ cd ~/dev_ws/
 source install/setup.bash
 ```
 
-Now, in one terminal start the camera range test program with following command. This terminal will display the frontal and rear measurements.
+Now, in one terminal start the camera range test program with following command.
 
 ```
 ros2 run camera_lidar_range_test demo
 ```
 
-On the other terminal, run the camera simulated LiDAR. This node is the one responsible for gathering the camera image, do some processing on it and with that it simulates a LiDAR sensor, and publish the distances calculated around the robot.
+On the other terminal, run the camera simulated LiDAR. This node is the one responsible for gathering the camera image, do some processing on it and with that it simulates a LiDAR sensor, and publish the distances calculated all around the robot.
 
 ```
 ros2 run fisheye_camera_simulated_sensors_ros2 simulated_lidar
@@ -182,7 +182,7 @@ Again, to check if everything is running properly, with both nodes running, run 
 
 ![Demo2_node_topics](https://user-images.githubusercontent.com/60965257/192100697-714140a0-f172-48fe-b39a-e239e7019d73.JPG)
 
-If everything is working as pretended, the demo should behave similarly to the video shown. On the top left of the video you can see the distance measured both by the front and back of the robot. Note that the values aren't precise and therefore do not represented the actual distance. This must be seen more as a scale, where the bigger the number, the further the objects are.
+If everything is working as pretended, the demo should behave similarly to the video shown. On the top left of the video you can see the distance measured both by the front and back of the robot (left terminal is the front distance, right is the back one). Note that the values aren't precise and therefore do not represented the actual distance. This must be seen more as a scale, where the bigger the number, the further the objects are.
 
 
 https://user-images.githubusercontent.com/60965257/190601560-2dfdb772-2660-4139-8ebb-a952cbab0ec2.mp4

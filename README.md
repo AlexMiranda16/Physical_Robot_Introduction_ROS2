@@ -180,7 +180,7 @@ ros2 launch camera_lidar_range_test range_demo.launch.xml
 
 Again, to check if everything is running properly, with both nodes running, run the ``ros2 node list`` and ``ros2 topic list`` commands on one new terminal. You should see the following nodes and topics running.
 
-![Demo2_node_topics](https://user-images.githubusercontent.com/60965257/190601008-9b5fea76-4365-43f6-ae48-f2cd3bfdaec1.JPG)
+![Demo2_node_topics](https://user-images.githubusercontent.com/60965257/192100697-714140a0-f172-48fe-b39a-e239e7019d73.JPG)
 
 If everything is working as pretended, the demo should behave similarly to the video shown. On the top left of the video you can see the distance measured both by the front and back of the robot. Note that the values aren't precise and therefore do not represented the actual distance. This must be seen more as a scale, where the bigger the number, the further the objects are.
 

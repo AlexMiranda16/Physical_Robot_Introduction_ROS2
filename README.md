@@ -182,10 +182,13 @@ Again, to check if everything is running properly, with both nodes running, run 
 
 ![Demo2_node_topics](https://user-images.githubusercontent.com/60965257/192100697-714140a0-f172-48fe-b39a-e239e7019d73.JPG)
 
-If everything is working as pretended, the demo should behave similarly to the video shown. On the top left of the video you can see the distance measured both by the front and back of the robot (left terminal is the front distance, right is the back one). Note that the values aren't precise and therefore do not represented the actual distance. This must be seen more as a scale, where the bigger the number, the further the objects are.
+If everything is working as pretended, the demo should behave similarly to the video shown. 
+On the botton of the video you can see the distances measured by the front (left side terminal) and back (right side terminal). These terminals are running the ``ros2 topic echo /front_measure`` and ``ros2 topic echo /back_measure`` commands.
+Note that the values are not precise and therefore do not represented the actual distance. This must be seen more as a scale, where the bigger the number, the further the objects are.
 
 
-https://user-images.githubusercontent.com/60965257/190601560-2dfdb772-2660-4139-8ebb-a952cbab0ec2.mp4
+https://user-images.githubusercontent.com/60965257/192109035-441c6a56-b751-4597-a9a8-0e057a3b0876.mp4
+
 
 **Additional Notes**
 
